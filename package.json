@@ -1,0 +1,36 @@
+{
+  "name": "db-backup",
+  "version": "1.0.0",
+  "description": "A Node.js application for backing up MySQL and MongoDB databases and optionally uploading the backups to S3.",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ereaey/infisical-db-backup-s3.git"
+  },
+  "keywords": [
+    "backup",
+    "mysql",
+    "mongodb",
+    "s3",
+    "aws",
+    "infisical"
+  ],
+  "author": "Anthony Arthus <anthony.arthus@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ereaey/infisical-db-backup-s3/issues"
+  },
+  "homepage": "https://github.com/Ereaey/infisical-db-backup-s3#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1003.0",
+    "dotenv": "^16.0.3",
+    "@infisical/sdk": "^2.2.3",
+    "mysql": "^2.18.1",
+    "mongodb": "^4.1.0"
+  }
+}
