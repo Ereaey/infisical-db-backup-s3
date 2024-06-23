@@ -2,28 +2,8 @@ import { InfisicalClient } from "@infisical/sdk";
 import dotenv from 'dotenv';
 
 dotenv.config();
+import {InfisicalClient} from "@infisical/sdk";
 
-let infisical;
-
-const requiredEnvVars = [
-    'DOMAIN_INFISICAL',
-    'PROJECT_INFISICAL',
-    'ENV_INFISICAL',
-    'MACHINE_ID',
-    'MACHINE_SECRET',
-];
-
-// Vérifier que toutes les variables d'environnement requises sont définies
-function checkEnvVars() {
-    requiredEnvVars.forEach(varName => {
-        if (!process.env[varName]) {
-            console.error(`Error: ${varName} is not set. Please define it in your .env file.`);
-            process.exit(1);
-        }
-    });
-}
-
-// Initialiser le client Infisical
 function initInfisical() {
     checkEnvVars();
 
@@ -58,12 +38,3 @@ async function getSecret(secret) {
         process.exit(1);
     }
 }
-
-// Vérifier que tous les secrets nécessaires sont définis dans Infisical
-async function checkSecrets(secrets) {
-    for (const secret of secrets) {
-        await getSecret(secret);
-    }
-}
-
-export { initInfisical, getSecret, checkSecrets };
