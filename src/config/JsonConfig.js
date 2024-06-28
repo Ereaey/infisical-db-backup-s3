@@ -23,19 +23,11 @@ export class JsonConfig extends Config {
         return true;
     }
 
-    getDatabaseList() {
-        return Object.keys(this.data.databases);
+    getActionsList() {
+        return Object.keys(this.data.actions);
     }
 
-    getDatabase(name) {
-        return this.data.databases[name] || null;
-    }
-
-    getTransfer() {
-        return this.data.transfer || null;
-    }
-
-    getNotification() {
-        return this.data.notification || null;
+    getAction(name) {
+        return this.data.actions[name] || null;
     }
 }

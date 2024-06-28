@@ -14,51 +14,55 @@
 
 ```json
 {
-    "database_test": {
-        "action": "backup",
-        "source": {
-            "mysql": {
-                "uri": "",
-                "database": ""
-            }
-        },
-        "transfers": {
-            "s3": {
-                "bucket": "",
-                "path": "",
-                "token": ""
-            }
-        },
-        "notifications": {
-            "slack": {
-                "webhook": "",
-                "token": "",
-                "level": "info"
-            }
+  "actions": [
+    {
+      "name": "database_test_backup",
+      "type": "backup",
+      "db": {
+        "mysql": {
+          "uri": "",
+          "database": ""
         }
-    },
-  "database_test2": {
-    "action": "backup",
-    "source": {
-      "mongodb": {
-        "uri": "",
-        "database": ""
+      },
+      "transfers": {
+        "s3": {
+          "bucket": "",
+          "path": "",
+          "token": ""
+        }
+      },
+      "notifications": {
+        "slack": {
+          "webhook": "",
+          "token": "",
+          "level": "info"
+        }
       }
     },
-    "transfers": {
-      "ftp": {
-        "domain": "",
-        "login": "",
-        "password": "",
-        "path": ""
-      }
-    },
-    "notifications": {
-      "telegram": {
-        "token": "",
-        "level": "info"
+    {
+      "name": "database_test_backup2",
+      "type": "backup",
+      "db": {
+        "mongodb": {
+          "uri": "",
+          "database": ""
+        }
+      },
+      "transfers": {
+        "ftp": {
+          "domain": "",
+          "login": "",
+          "password": "",
+          "path": ""
+        }
+      },
+      "notifications": {
+        "telegram": {
+          "token": "",
+          "level": "info"
+        }
       }
     }
-  }
+  ]
 }
 ```

@@ -10,23 +10,13 @@ export class Config {
         return false;
     }
 
-    // Return list of database name
-    getDatabaseList() {
+    // Return list of actions
+    getActionsList() {
         throw new Error('Function not implemented');
     }
 
     // Return
-    getDatabase(name) {
-        throw new Error('Function not implemented');
-    }
-
-    //Return transfer information s3, ...
-    getTransfer() {
-        throw new Error('Function not implemented');
-    }
-
-    // Return notification information
-    getNotification() {
+    getAction(name) {
         throw new Error('Function not implemented');
     }
 }

@@ -1,14 +1,15 @@
 import {Notification} from "./Notification.js";
-export class SlackNotification extends Notification {
+
+export class ConsoleNotification extends Notification{
 
     constructor(configuration) {
         super(configuration.level);
     }
     sendInternalMessage(message) {
-        console.log(message);
+        console.log("Notification :", message);
     }
 
     sendInternalError(message) {
-       console.error(message);
+        console.error("Notification :", message);
     }
 }

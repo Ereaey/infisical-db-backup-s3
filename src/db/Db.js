@@ -1,14 +1,14 @@
 export class Db {
 
-    constructor(name, source) {
+    constructor(name, configuration) {
         if (this.constructor === Db) {
             throw new TypeError('Abstract class "Db" cannot be instantiated directly');
         }
-        this.source = source;
+        this.configuration = configuration;
         this.name = name;
     }
 
-    dump() {
+    async dump() {
         throw new Error('Function not implemented');
     }
 }
