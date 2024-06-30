@@ -5,11 +5,11 @@ export class ConsoleNotification extends Notification{
     constructor(configuration) {
         super(configuration.level);
     }
-    sendInternalMessage(message) {
+    async sendInternalMessage(message) {
         console.log("Notification :", message);
     }
 
-    sendInternalError(message) {
+    async sendInternalError(message) {
         console.error("Notification :", message);
     }
 }

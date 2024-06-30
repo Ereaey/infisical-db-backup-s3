@@ -24,7 +24,7 @@ export class JsonConfig extends Config {
     }
 
     getActionsList() {
-        return Object.keys(this.data.actions);
+        return Object.keys(this.data.actions) || [];
     }
 
     getAction(name) {

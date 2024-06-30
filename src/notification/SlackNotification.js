@@ -4,11 +4,11 @@ export class SlackNotification extends Notification {
     constructor(configuration) {
         super(configuration.level);
     }
-    sendInternalMessage(message) {
+    async sendInternalMessage(message) {
         console.log(message);
     }
 
-    sendInternalError(message) {
+    async sendInternalError(message) {
        console.error(message);
     }
 }

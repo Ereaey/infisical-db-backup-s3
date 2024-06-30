@@ -31,6 +31,7 @@
     "dotenv": "^16.0.3",
     "@infisical/sdk": "^2.2.3",
     "mysql": "^2.18.1",
-    "mongodb": "^4.1.0"
+    "mongodb": "^4.1.0",
+    "axios": "^1.7.2"
   }
 }

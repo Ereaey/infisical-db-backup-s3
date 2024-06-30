@@ -14,23 +14,23 @@ class Notification {
         this.level = level;
     }
 
-    sendMessage(message) {
+    async sendMessage(message) {
         if (this.level === NotificationLevel.Info) {
-            this.sendInternalMessage(message);
+            await this.sendInternalMessage(message);
         }
     }
 
-    sendError(message) {
-        this.sendInternalError(message);
+    async sendError(message) {
+        await this.sendInternalError(message);
     }
 
 
-    sendInternalMessage(message) {
+    async sendInternalMessage(message) {
         throw new Error('Function not implemented');
     }
 
     // Return
-    sendInternalError(message) {
+    async sendInternalError(message) {
         throw new Error('Function not implemented');
     }
 }

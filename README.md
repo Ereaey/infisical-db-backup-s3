@@ -14,55 +14,29 @@
 
 ```json
 {
-  "actions": [
-    {
-      "name": "database_test_backup",
-      "type": "backup",
-      "db": {
+  "actions": {
+    "dqsd": {
+      "name": "dqsd",
+      "type": "dump",
+      "source": {
         "mysql": {
-          "uri": "",
-          "database": ""
-        }
-      },
-      "transfers": {
-        "s3": {
-          "bucket": "",
-          "path": "",
-          "token": ""
+          "user": "ok"
         }
       },
       "notifications": {
+        "console": {
+          "level": "info"
+        },
         "slack": {
-          "webhook": "",
-          "token": "",
           "level": "info"
-        }
-      }
-    },
-    {
-      "name": "database_test_backup2",
-      "type": "backup",
-      "db": {
-        "mongodb": {
-          "uri": "",
-          "database": ""
-        }
-      },
-      "transfers": {
-        "ftp": {
-          "domain": "",
-          "login": "",
-          "password": "",
-          "path": ""
-        }
-      },
-      "notifications": {
+        },
         "telegram": {
+          "level": "info",
           "token": "",
-          "level": "info"
+          "id": ""
         }
       }
     }
-  ]
+  }
 }
 ```

@@ -1,6 +1,7 @@
 import {SlackNotification} from "./SlackNotification.js";
 import {ConsoleNotification} from "./ConsoleNotification.js";
 import {NotificationLevel} from "./Notification.js";
+import {TelegramNotification} from "./TelegramNotification.js";
 
 
 export class NotificationManager {
@@ -10,18 +11,21 @@ export class NotificationManager {
             console.log("Create slack notifier")
             this.notifications.push(new SlackNotification(notifications.slack));
         }
+        if (notifications.telegram) {
+            this.notifications.push(new TelegramNotification(notifications.telegram));
+        }
         this.notifications.push(new ConsoleNotification({level: NotificationLevel.Info}));
     }
 
-    sendMessage(message) {
+    async sendMessage(message) {
         for (const notification of this.notifications) {
-            notification.sendMessage(message);
+            await notification.sendMessage(message);
         }
     }
 
-    sendError(message) {
+    async sendError(message) {
         for (const notification of this.notifications) {
-            notification.sendError(message);
+            await notification.sendError(message);
         }
     }
 }
