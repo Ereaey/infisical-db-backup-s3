@@ -1,0 +1,26 @@
+{
+  "actions": {
+    "dqsd": {
+      "name": "dqsd",
+      "type": "dump",
+      "source": {
+        "mysql": {
+          "user": "ok"
+        }
+      },
+      "notifications": {
+        "console": {
+          "level": "info"
+        },
+        "slack": {
+          "level": "info"
+        },
+        "telegram": {
+          "level": "info",
+          "token": "",
+          "id": ""
+        }
+      }
+    }
+  }
+}
