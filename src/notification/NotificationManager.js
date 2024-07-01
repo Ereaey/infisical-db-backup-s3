@@ -12,6 +12,7 @@ export class NotificationManager {
             this.notifications.push(new SlackNotification(notifications.slack));
         }
         if (notifications.telegram) {
+            console.log("Create telegram notifier")
             this.notifications.push(new TelegramNotification(notifications.telegram));
         }
         this.notifications.push(new ConsoleNotification({level: NotificationLevel.Info}));

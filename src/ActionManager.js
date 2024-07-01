@@ -11,8 +11,8 @@ export async function executeAction(action) {
             const db = new DbManager(action.name, action.source);
             await db.dump()
             await notifications.sendMessage("Dump is finished");
-            const storage = new StorageManager();
-            await storage.save();
+            const storage = new StorageManager(action.storages);
+            await storage.save(action.name, action.name);
             await notifications.sendMessage("Store is finished");
         } catch (e) {
             await notifications.sendError("Dump is in error");

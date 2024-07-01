@@ -10,12 +10,10 @@ export class Config {
         return false;
     }
 
-    // Return list of actions
     getActionsList() {
         throw new Error('Function not implemented');
     }
 
-    // Return
     getAction(name) {
         throw new Error('Function not implemented');
     }

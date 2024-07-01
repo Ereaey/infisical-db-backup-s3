@@ -12,7 +12,7 @@ export class TelegramNotification extends Notification {
         try {
             await axios.get(`https://api.telegram.org/bot${this.token}/sendMessage?chat_id=${this.id}&text=${Buffer.from(messageHtml, 'utf-8').toString()}&parse_mode=HTML`, {adapter: "fetch"});
         } catch (e) {
-            console.error("Impossible d'envoyer de log à Telegram ", e);
+            console.error("Impossible d'envoyer de log à Telegram");
         }
     }
 

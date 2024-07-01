@@ -1,7 +1,7 @@
 {
   "actions": {
-    "dqsd": {
-      "name": "dqsd",
+    "database-test": {
+      "name": "database-test",
       "type": "dump",
       "source": {
         "mysql": {
@@ -19,6 +19,14 @@
           "level": "info",
           "token": "",
           "id": ""
+        }
+      },
+      "storages": {
+        "s3": {
+          "keyId": "",
+          "accessKey": "",
+          "region": "",
+          "bucket": ""
         }
       }
     }
