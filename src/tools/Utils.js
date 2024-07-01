@@ -1,5 +1,3 @@
-
-
 function checkEnvVars(requiredEnvVars) {
     requiredEnvVars.forEach(varName => {
         if (!process.env[varName]) {

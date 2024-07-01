@@ -1,4 +1,4 @@
-import { Config } from './Config.js';
+import {Config} from './Config.js';
 import fs from 'fs';
 import path from 'path';
 

@@ -1,5 +1,6 @@
 import {Notification} from "./Notification.js";
 import axios from "axios";
+
 export class TelegramNotification extends Notification {
 
     constructor(configuration) {
@@ -7,6 +8,7 @@ export class TelegramNotification extends Notification {
         this.token = configuration.token;
         this.id = configuration.id;
     }
+
     async sendInternalMessage(message) {
         const messageHtml = `<b>Backup : </b>${message}`;
         try {

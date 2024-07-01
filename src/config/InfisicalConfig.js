@@ -1,8 +1,7 @@
-import { InfisicalClient } from "@infisical/sdk";
+import {InfisicalClient} from "@infisical/sdk";
 import dotenv from 'dotenv';
 
 dotenv.config();
-import {InfisicalClient} from "@infisical/sdk";
 
 function initInfisical() {
     checkEnvVars();

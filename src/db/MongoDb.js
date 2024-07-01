@@ -1,4 +1,4 @@
-import { Db } from './Db.js';
+import {Db} from './Db.js';
 import {exec} from "child_process";
 
 export class MongoDb extends Db {

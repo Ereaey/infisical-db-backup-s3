@@ -1,5 +1,3 @@
-
-
 const NotificationLevel = {
     Info: "info",
     Error: "error"

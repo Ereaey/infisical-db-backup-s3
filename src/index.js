@@ -1,6 +1,5 @@
 import {executeAction} from "./ActionManager.js";
 import {ConfigManager} from "./config/ConfigManager.js";
-import {Config} from "./config/Config.js";
 
 async function main() {
     const configManager = new ConfigManager();

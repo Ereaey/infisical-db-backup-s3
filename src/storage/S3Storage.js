@@ -3,7 +3,7 @@ import fs from "fs";
 import {Storage} from "./Storage.js";
 
 export class S3Storage extends Storage {
-     constructor(configuration) {
+    constructor(configuration) {
         super();
         console.log("S3 Initialization");
 
@@ -16,7 +16,7 @@ export class S3Storage extends Storage {
         });
     }
 
-    async save(name, filePath){
+    async save(name, filePath) {
         const s3 = new AWS.S3();
         const fileStream = fs.createReadStream(filePath);
         const params = {

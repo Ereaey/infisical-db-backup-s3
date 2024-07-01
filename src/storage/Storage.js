@@ -1,4 +1,3 @@
-
 export class Storage {
     constructor() {
         if (this.constructor === Storage) {
@@ -6,7 +5,7 @@ export class Storage {
         }
     }
 
-    async save(name, filePath){
+    async save(name, filePath) {
         throw new Error('Function not implemented');
     }
 }

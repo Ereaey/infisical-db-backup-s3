@@ -1,6 +1,6 @@
 import {S3Storage} from "./S3Storage.js";
 
-export class StorageManager  {
+export class StorageManager {
     constructor(configuration) {
         this.storages = [];
         if (configuration.s3) {
